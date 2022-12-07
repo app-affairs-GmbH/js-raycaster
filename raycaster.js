@@ -102,6 +102,9 @@ class Raycaster {
     document.addEventListener('keyup', (evt) => {
       delete this.keysDown[evt.key]
     })
+    window.addEventListener("blur", (evt) => {
+      this.keysDown = {}
+    })
 
     this.drawMap()
     this.tick()
