@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #2c2e3a;
+      }
+      .raycaster {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .canvasWrapper {
+        margin: 32px;
+      }
+
+    </style>
+    <script src="textures.js"></script>
+    <script src="raycaster.js"></script>
+  </head>
+  <body>
+    <div class="raycaster">
+      <div class="canvasWrapper"><canvas id="mapCanvas"></canvas></div>
+      <div class="canvasWrapper"><canvas id="gameCanvas"></canvas></div>
+    </div>
+    <script>
+      const mapCanvas = document.getElementById('mapCanvas')
+      const gameCanvas = document.getElementById('gameCanvas')
+      const raycaster = new Raycaster(mapCanvas, gameCanvas)
+    </script>
+  </body>
+</html>
